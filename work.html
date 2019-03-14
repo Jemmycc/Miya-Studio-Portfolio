@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="./style-work.css"> -->
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Advent+Pro|Architects+Daughter|Changa:700|Exo+2:600|Exo:700|Fjalla+One|Istok+Web:700|Jura|Khand|Overpass|Teko:500|Ubuntu:500"
+        rel="stylesheet">
+
+    <!-- Fonts Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/lux/bootstrap.min.css">
+
+    <title>:::....MIYS STUDIO....:::</title>
+
+</head>
+
+
+<body>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            background-color: rgb(219, 214, 209);
+        }
+
+        .img-work {
+            border-radius: 50%;
+        }
+
+        .col-md-4 {
+            margin-top: 100px;
+        }
+
+        #work-title {
+            width: 188px;
+            padding: 25px;
+        }
+
+        .closepage {
+            color: #8f8e8e;
+            float: right;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .closepage:hover {
+            color: rgb(240, 238, 238);
+        }
+
+        .pr1-title {
+            margin-top: 30px;
+            font-size: 50px;
+            font-family: 'Fjalla One', sans-serif;
+            color: rgb(56, 56, 56);
+            margin-left: -30px;
+            line-height: 58px;
+        }
+
+        .pr1-text {
+            font-size: 15px;
+            font-family: 'Overpass', sans-serif;
+            letter-spacing: 1px;
+            color: rgb(56, 56, 56);
+            margin-left: -30px;
+            margin-bottom: 30px;
+            width: 400px;
+        }
+
+        .pr1-pre-link {
+            color: rgb(158, 45, 17);
+            margin-left: -30px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .link-icon {
+            background: url("./img/a2.png") no-repeat;
+        }
+
+        .pr1-pre-link:hover {
+            font-weight: 900;
+            text-decoration: none;
+
+        }
+
+        #work-number {
+            font-size: 180px;
+            font-family: 'Fjalla One', sans-serif;
+            color: rgb(233, 231, 231);
+            font-weight: bolder;
+            margin-left: -50px;
+        }
+
+        #work-number-title {
+            font-size: 38px;
+            font-family: 'Fjalla One', sans-serif;
+            color: rgb(233, 231, 231);
+        }
+
+        .number {
+            margin-bottom: -100px;
+        }
+
+        .link-icon {
+            background-image: url("./img/a2.png");
+        }
+
+        .link-icon:hover {
+            background-image: url("./img/a2-2.png");
+        }
+
+
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        /*Overlay*/
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(5, 40, 56);
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        #close-overlay-btn {
+            margin-top: 15px;
+            color: rgb(212, 212, 211);
+            border: 0.5px solid rgb(212, 212, 211);
+            width: 130px;
+            font-size: 12px;
+        }
+
+        #close-overlay-btn2 {
+            margin-top: 15px;
+            color: rgb(121, 121, 117);
+            border: 0.5px solid rgb(121, 121, 117);
+            width: 130px;
+            font-size: 12px;
+        }
+
+
+        #close-overlay-btn:hover {
+            background-color: rgb(189, 189, 189);
+            color: rgb(37, 37, 37);
+            color: #fff;
+            border: none;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay a {
+                font-size: 20px
+            }
+
+            .overlay {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        /*overlay content*/
+        #close-btn {
+            margin-left: 90%;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .img-fluid {
+            width: 350px;
+        }
+
+        .proj1-title {
+            font-size: 52px;
+            font-family: 'Fjalla One', sans-serif;
+            color: rgb(189, 189, 189);
+            margin-top: -30px;
+        }
+
+        .proj1-text {
+            font-size: 15px;
+            font-family: 'Overpass', sans-serif;
+            letter-spacing: 1px;
+            color: rgb(189, 189, 189);
+        }
+
+        .right-arrow {
+            margin-top: 200px;
+            text-align: right;
+            padding-right: 40px;
+            font-size: 22px;
+            color: rgb(150, 147, 147);
+            cursor: pointer;
+        }
+
+        .right-arrow:hover {
+            color: rgb(226, 224, 103);
+        }
+
+        /*backend*/
+        .modalBtn {
+            margin-top: 15px;
+            color: rgb(189, 189, 189);
+            border: 0.5px solid rgb(189, 189, 189);
+            width: 130px;
+            font-size: 12px;
+            background-color: rgb(68, 68, 68);
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .modalBtn:hover {
+            background-color: rgb(235, 233, 233);
+            color: rgb(37, 37, 37);
+        }
+
+        /*overlay cards*/
+        .card {
+            display: none;
+            border: 0px;
+        }
+
+        #card1 {
+            background-color: rgb(5, 40, 56);
+        }
+
+        #card2 {
+            background-color: rgb(50, 59, 56);
+        }
+
+        #card3 {
+            background-color: rgb(77, 62, 82);
+        }
+
+        #card4 {
+            background-color: rgb(73, 68, 58);
+        }
+
+        #card5 {
+            background-color: rgb(52, 65, 66);
+        }
+
+        #card6 {
+            background-color: rgb(80, 72, 36);
+        }
+
+        .card-horizontal {
+            display: flex;
+            flex: 1 1 auto;
+        }
+
+        .card-square {
+            margin-top: 90px;
+        }
+
+        .pr2-title {
+            margin-top: 10px;
+            font-size: 45px;
+            font-family: 'Fjalla One', sans-serif;
+            color: rgb(56, 56, 56);
+            line-height: 52px;
+            letter-spacing: -.2px;
+        }
+
+        .pr2-text {
+            font-size: 15px;
+            font-family: 'Overpass', sans-serif;
+            letter-spacing: .8px;
+            color: rgb(56, 56, 56);
+            margin-bottom: 30px;
+            padding-top: 10px;
+        }
+
+        .pr2-pre-link {
+            color: rgb(158, 45, 17);
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .modal-content {
+            height: 720px;
+            opacity: .9;
+            background-color: rgb(250, 248, 248);
+        }
+
+        #close-modal-btn {
+            margin-right: 20px;
+            font-weight: bolder;
+            text-align: right;
+        }
+
+        .proj3-title {
+            margin-top: 20px;
+            font-size: 45px;
+            font-family: 'Fjalla One', sans-serif;
+            color: rgb(56, 56, 56);
+            padding-left: 100px;
+        }
+
+        .proj3-text {
+            font-size: 13px;
+            font-family: 'Overpass', sans-serif;
+            letter-spacing: 1px;
+            color: rgb(56, 56, 56);
+            margin-bottom: 20px;
+            padding-left: 100px;
+            padding-right: 50px;
+        }
+
+        #back-end-video {
+            border: 2px solid black;
+        }
+
+        /*logo*/
+        .card-square-logo {
+            margin-top: 90px;
+            width: 12rem;
+        }
+
+        .pr4-title {
+            margin-top: 5px;
+            font-size: 12px;
+            font-family: 'Overpass', sans-serif;
+            color: rgb(56, 56, 56);
+            font-weight: 900;
+            letter-spacing: 0.2 px;
+            text-align: right;
+        }
+
+        /*Print*/
+        .modalBtn-print {
+            margin-top: 15px;
+            color: rgb(189, 189, 189);
+            border: 0.5px solid rgb(189, 189, 189);
+            width: 120px;
+            font-size: 12px;
+            background-color: rgb(105, 103, 103);
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .modalBtn-print:hover {
+            color: rgb(59, 59, 59);
+            background-color: rgb(212, 212, 212);
+            cursor: pointer;
+        }
+
+        .print-img {
+            width: 70%;
+            margin: -1px 115px;
+
+        }
+
+        .modalPrint {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 75%;
+            height: 650px;
+            opacity: 0.9;
+        }
+
+        .card-series {
+            width: 80%;
+            margin: 5px 115px;
+        }
+
+        /*Motion Graphics*/
+        .modalMotions {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 75%;
+            height: 550px;
+            opacity: 0.9;
+        }
+
+        .modalBtn-motions {
+            margin-top: 15px;
+            color: rgb(189, 189, 189);
+            border: 0.5px solid rgb(189, 189, 189);
+            width: 120px;
+            font-size: 12px;
+            background-color: rgb(105, 103, 103);
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .modalBtn-motions:hover {
+            color: rgb(59, 59, 59);
+            background-color: rgb(212, 212, 212);
+            cursor: pointer;
+        }
+
+        .motion-video {
+            margin: 1px 130px;
+        }
+
+        .wrapper {
+            display: table;
+            width: auto;
+            position: relative;
+            width: 50%;
+        }
+
+        .playpause {
+            background-image: url("./img/play.png");
+            background-repeat: no-repeat;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .bottom {
+            height: 100px;
+            background-color: rgb(53, 50, 66);
+            margin-top: 300px;
+            display: inline-block;
+        }
+
+        .left {
+            color: #fff;
+            font-size: 12px;
+            letter-spacing: 2px;
+            padding-left: 10px;
+            margin-top: 55px;
+            bottom: 0;
+            float: left;
+        }
+
+        .fab {
+            color: #fff;
+        }
+
+        .fas {
+            color: #fff;
+        }
+
+        .right-work {
+            color: #fff;
+            font-size: 12px;
+            letter-spacing: 4.2px;
+            float: right;
+            margin-top: 56px;
+        }
+
+        .right-right-work {
+            padding-left: 70px;
+            font-size: 12px;
+            color: #fff;
+        }
+    </style>
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <img id="work-title" src="./img/name.png" />
+
+                <div class="closepage" onclick="self.close()"><i class="far fa-times-circle"></i></div>
+
+
+            </div>
+        </div>
+
+        <!--Website-->
+        <div class="row">
+            <div class="col-md-12 number">
+                <span id="work-number">02.</span>
+                <span id="work-number-title">Game Design</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4">
+                <img src="./img/works/work301-2.jpg" class="img-work" style="width:300px">
+            </div>
+
+            <div class="col-md-4">
+                <div class="pr1-title">80's Movie Trivia</div>
+                <div class="pr1-text">Want to challenge your knowledge of 80’s movies? Try this game!</div>
+                <div class="pr1-pre-link" onclick="openCard1()" target="blank">
+                    <div class="link-icon">
+                        &nbsp
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4">
+
+                <div class="pr1-title">Crystal Collector</div>
+                <div class="pr1-text">Try to match a target value by collecting an assortment of crystals.</div>
+                <div class="pr1-pre-link" onclick="openCard2()" target="blank">
+                    <div class="link-icon">
+                        &nbsp
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <img src="./img/works/work201-2.jpg" class="img-work" style="width:300px">
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4">
+                <img src="./img/works/work401-2.jpg" class="img-work" style="width:300px">
+            </div>
+            <div class="col-md-4">
+
+                <div class="pr1-title">Internet Slang</div>
+                <div class="pr1-text">How well do you know internet slang? Test your knowledge with this game.</div>
+                <div class="pr1-pre-link" onclick="openCard3()" target="blank">
+                    <div class="link-icon">
+                        &nbsp
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4">
+
+                <div class="pr1-title">Rock Paper & Scissors </div>
+                <div class="pr1-text">Want to play an online multiplayer game with your friend?</div>
+                <div class="pr1-pre-link" onclick="openCard4()" target="blank">
+                    <div class="link-icon">
+                        &nbsp
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+                <img src="./img/works/work701-2.jpg" class="img-work" style="width:300px">
+
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4">
+
+                <img src="./img/works/work901-2.jpg" class="img-work" style="width:300px">
+            </div>
+
+            <div class="col-md-4">
+                <div class="pr1-title">Game of Thrones</div>
+                <div class="pr1-text">Pit your favorite Game of Thrones characters against each other to win the
+                    throne.</div>
+                <div class="pr1-pre-link" onclick="openCard5()" target="blank">
+                    <div class="link-icon">
+                        &nbsp
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4">
+
+                <div class="pr1-title">Clicky Bird Game </div>
+                <div class="pr1-text">Clicky Bird Game is an app that lets users practice their memory.</div>
+                <div class="pr1-pre-link" onclick="openCard6()" target="blank">
+                    <div class="link-icon">
+                        &nbsp
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+                <img src="./img/works/work1001-2.jpg" class="img-work" style="width:300px">
+
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+
+
+
+
+
+        <!--backend work-->
+        <div class="row">
+            <div class="col-md-12 number">
+                <span id="work-number">03.</span>
+                <span id="work-number-title">Backend Development</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/work801-2.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Liri-Node</div>
+                        <div class="pr2-text">LIRI is a Language Interpretation and Recognition Interface. It’s a
+                            command line node app that allows a user to search for
+                            movies, music and concerts.</div>
+                        <button class="modalBtn" id="modbtn-liri" onClick="openModel(this.id)">VIEW DEMO</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/work801-6.JPG">
+                    <div class="card-body2">
+                        <div class="pr2-title">Train Schedule</div>
+                        <div class="pr2-text">This app provides up-to-date information about various trains, namely
+                            their
+                            arrival times and how many minutes remain until they arrive at
+                            their station.</div>
+                        <button class="modalBtn" id="modbtn-train" onClick="openModel(this.id)">VIEW DEMO</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/work801-1.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Word Game</div>
+                        <div class="pr2-text">A simple command-line word guess game.</div>
+                        <button class="modalBtn" id="modbtn-wordgame" onClick="openModel(this.id)">VIEW DEMO</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/work801-3.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Friend Finder</div>
+                        <div class="pr2-text">This dating app helps a user to find the best match based on their
+                            responses to 10 survey questions.</div>
+                        <button class="modalBtn" id="modbtn-finding" onClick="openModel(this.id)">VIEW DEMO</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/work801-5.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Bamazon Storefront</div>
+                        <div class="pr2-text">The app allows the customers to buy items by taking orders, then updates
+                            inventory and tracks total sales. A manager can check the product sales across the
+                            departments and then provide a summary of the
+                            highest-grossing departments
+                            in the store.</div>
+                        <button class="modalBtn" id="modbtn-bamazon" onClick="openModel(this.id)">VIEW DEMO</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/work801-4.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Very Good Friends Burger Shop</div>
+                        <div class="pr2-text">The app lets a user input names of burgers they'd like to eat, and keeps
+                            track of his/her devoured burgers in a
+                            separate area.</div>
+                        <button class="modalBtn" id="modbtn-burger" onClick="openModel(this.id)">VIEW DEMO</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <!--Logo-->
+        <div class=" row">
+            <div class="col-md-12 number">
+                <span id="work-number">04.</span>
+                <span id="work-number-title">Logo / identify</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 card-logo"></div>
+
+            <div class="col-md-2">
+                <div class="card-square-logo">
+                    <img class="card-img-top" src="./img/works/logos/cater01.jpg">
+                    <div class="pr4-title">CARTER EXTERIORS</div>
+                </div>
+
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square-logo">
+                    <img class="card-img-top" src="./img/works/logos/eune01.jpg">
+                    <div class="pr4-title">EUNE TELECOME</div>
+
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square-logo">
+                    <img class="card-img-top" src="./img/works/logos/in01.jpg">
+                    <div class="pr4-title">THOMAS DESIGN INC</div>
+
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square-logo">
+                    <img class="card-img-top" src="./img/works/logos/mark01.jpg">
+                    <div class="pr4-title">MARK TECH</div>
+
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2">
+                <div class="card-square-logo">
+                    <img class="card-img-top" src="./img/works/logos/lo01.jpg">
+                    <div class="pr4-title">MAGEDDON </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square-logo">
+                    <img class="card-img-top" src="./img/works/logos/de01.jpg">
+                    <div class="pr4-title">DELUXE </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square-logo">
+                    <img class="card-img-top" src="./img/works/logos/co01.jpg">
+                    <div class="pr4-title">COCOA CO.</div>
+
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square-logo">
+                    <img class="card-img-top" src="./img/works/logos/mayu01.jpg">
+                    <div class="pr4-title">MAE & YU BOUTIQUE</div>
+
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+        </div>
+
+
+        <!--Print-->
+        <div class=" row">
+            <div class="col-md-12 number">
+                <span id="work-number">05.</span>
+                <span id="work-number-title">Print</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/print/mca.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">MCA</div>
+                        <button class="modalBtn-print" id="modbtn-print1" onClick="openModel(this.id)">VIEW
+                            SAMPLES</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/print/youngliving.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Young Living</div>
+                        <button class="modalBtn-print" id="modbtn-print2" onClick="openModel(this.id)">VIEW
+                            SAMPLES</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/print/wheel.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Keep Moving</div>
+                        <button class="modalBtn-print" id="modbtn-print3" onClick="openModel(this.id)">VIEW
+                            SAMPLES</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/print/series.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Series</div>
+                        <button class="modalBtn-print" id="modbtn-print4" onClick="openModel(this.id)">VIEW
+                            SAMPLES</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/print/haiku.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Haiku</div>
+                        <button class="modalBtn-print" id="modbtn-print5" onClick="openModel(this.id)">VIEW
+                            SAMPLES</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/print/reach.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">In & Out</div>
+                        <button class="modalBtn-print" id="modbtn-print6" onClick="openModel(this.id)">VIEW
+                            SAMPLES</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--Motion Graphic-->
+        <div class=" row">
+            <div class="col-md-12 number">
+                <span id="work-number">06.</span>
+                <span id="work-number-title">Motion Graphics</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/airmen.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Airmen's week</div>
+                        <button class="modalBtn-motions" id="modbtn-motion1" onClick="openModel(this.id)">VIEW
+                            WORKS</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card-square" style="width:11rem">
+                    <img class="card-img-top" src="./img/works/without.jpg">
+                    <div class="card-body2">
+                        <div class="pr2-title">Without Something</div>
+                        <button class="modalBtn-motions" id="modbtn-motion2" onClick="openModel(this.id)">VIEW
+                            WORKS</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class=" row">
+            <div class="col-md-12 bottom">
+                <div class="left">
+                    &copy <i>2019</i> All rights reserved | MIYA STUDIO
+                    <div class="right">
+                        <a href="https://www.facebook.com/miyastudio/?ref=bookmarks" target="_blank"><i
+                                class="fab fa-facebook-square"></i>&nbsp;</a>
+                        <a href="https://miyacorner.blogspot.com/" target="_blank"><i
+                                class="fab fa-blogger"></i>&nbsp;</a>
+                        <a href="https://www.linkedin.com/in/jemmyc/" target="_blank"><i
+                                class="fab fa-linkedin"></i>&nbsp;</a>
+                        <a href="https://vimeo.com/user57975818" target="_blank"><i class="fab fa-vimeo-square"></i></a>
+                    </div>
+                </div>
+                <div class="right-work">
+                    Denver, COLORADO, USA<br>
+                    <div class="right-right-work">303.565.7197 &nbsp;<a href="mailto:jemmycc@gmail.com"><i
+                                class="fas fa-envelope"></i></a></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--modal motion graphics-->
+
+        <!-- motion graphics Modal content -->
+        <div id="modal-motion1" class="modal">
+            <div class="modalMotions">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+                <div class="proj3-title">Airmen's Week</div>
+                <div class="wrapper">
+                    <video width="550" class="motion-video">
+                        <source src="./video/airmen.mp4" class="img-fluid" type="video/mp4">
+                        <source src="./video/airmen.webm" type="video/webm" />
+                        <source src="./video/airmen.OGV" type="video/ogg" />
+                    </video>
+                    <div class="playpause"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-motion2" class="modal">
+            <div class="modalMotions">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+                <div class="proj3-title">Without Something</div>
+                <div class="wrapper">
+                    <video width="550" class="motion-video">
+                        <source src="./video/withoutSomething.mp4" class="img-fluid" type="video/mp4">
+                        <source src="./video/withoutSomething.webm" type="video/webm" />
+                        <source src="./video/withoutSomething.OGV" type="video/ogg" />
+                    </video>
+                    <div class="playpause"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--modal print-->
+
+        <!-- Print Modal content -->
+        <div id="modal-print1" class="modal">
+            <div class="modalPrint">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+                <div class="proj3-title">MCA</div>
+                <img class="print-img" src="img/works/print/mca01.jpg" />
+            </div>
+        </div>
+
+        <div id="modal-print2" class="modal">
+            <div class="modalPrint">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+                <div class="proj3-title">Young Living essential oil</div>
+                <img class="print-img" src="img/works/print/young01.jpg" />
+            </div>
+        </div>
+
+        <div id="modal-print3" class="modal">
+            <div class="modalPrint">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+                <div class="proj3-title">Keep Moving</div>
+                <img class="print-img" src="img/works/print/wheel01.jpg" />
+            </div>
+        </div>
+
+        <div id="modal-print4" class="modal">
+            <div class="modalPrint">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+                <div class="proj3-title">自覺 series</div>
+                <img class="card-series" src="img/works/print/series01.jpg" />
+            </div>
+        </div>
+
+        <div id="modal-print5" class="modal">
+            <div class="modalPrint">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+                <div class="proj3-title">Haiku</div>
+                <img class="print-img" src="img/works/print/haiku01.jpg" />
+            </div>
+        </div>
+
+        <div id="modal-print6" class="modal">
+            <div class="modalPrint">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+                <div class="proj3-title">In & Out</div>
+                <img class="print-img" src="img/works/print/inout01.jpg" />
+            </div>
+        </div>
+
+
+        <!--modal-->
+
+        <!-- Liri Modal content -->
+        <div id="modal-liri" class="modal">
+
+            <div class="modal-content">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+
+                <div class="proj3-title">Liri-Node</div>
+                <div class="proj3-text">The app includes four command line options for searching.
+                    The “movie-this” keyword queries IMDB for the specified movie, and returns information
+                    about the
+                    movie such as title, release year, IMDB rating, Rotten Tomato rating, production
+                    country, language,
+                    actors, and plot.
+                    The “spotify-this-song” keyword queries Spotify for the specified song, and returns
+                    information
+                    about the song such as the artist(s), album, and preview URL.
+                    The “concert-this” keyword queries Band in Town for the specified artist or band, and
+                    returns
+                    information about future concerts, such as venue name and location, and date of the
+                    event.
+                    The “do-what-it-says” keyword reads a command from the file “random.txt” and performs
+                    the
+                    appropriate search. The results are output to the terminal and also stored in the file
+                    “log.txt”.
+                </div>
+
+                <center>
+                    <video width="600" autoplay="" loop="" muted="">
+                        <source src="./video/liri-v1.mp4" class="backend-video" type="video/mp4">
+                        <source src="./video/liri-v1.webm" type="video/webm" />
+                        <source src="./video/liri-v1.OGV" type="video/ogg" />
+
+                    </video>
+                </center>
+                <div class="demo-link" align="right">
+                    <div id="close-modal-btn">
+                        <a href="https://github.com/Jemmycc/liri-node-app" target="_blank" id="close-overlay-btn2"
+                            class="btn light-btn" align="right" target="_blank">view code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Train Modal content -->
+        <div id="modal-train" class="modal">
+
+            <div class="modal-content">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+
+                <div class="proj3-title">Train Schedule</div>
+                <div class="proj3-text">
+                    The train schedule application incorporates Firebase to host arrival and departure
+                    data.
+                </div>
+
+                <center>
+                    <video id="back-end-video" width="600" autoplay="" loop="" muted="">
+                        <source src="./video/train-v1.mp4" class="backend-video" type="video/mp4">
+                        <source src="./video/train-v1.webm" type="video/webm" />
+                        <source src="./video/train-v1.OGV" type="video/ogg" />
+
+                    </video>
+                </center>
+                <div class="demo-link" align="right">
+                    <div id="close-modal-btn">
+                        <a href="https://github.com/Jemmycc/Train-Schedule" target="_blank" id="close-overlay-btn2"
+                            class="btn light-btn" align="right" target="_blank">view code</a>
+                        <a href="https://jemmycc.github.io/Train-Schedule/" target="_blank" id="close-overlay-btn2"
+                            class="btn light-btn" align="right" target="_blank">view
+                            demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WordGame Modal content -->
+        <div id="modal-wordgame" class="modal">
+
+            <div class="modal-content">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+
+                <div class="proj3-title">Word Game</div>
+                <div class="proj3-text">To start the game, the user simply types “node index” in the
+                    terminal. Type a
+                    letter to start guessing the words for each challenge.
+                    The messages will show the remaining guesses, whether a letter guess is correct or
+                    incorrect, and whether or not you won the game.
+                </div>
+
+                <center>
+                    <video width="600" autoplay="" loop="" muted="">
+                        <source src="./video/wordgame-v1.mp4" class="backend-video" type="video/mp4">
+                        <source src="./video/wordgame-v1.webm" type="video/webm" />
+                        <source src="./video/wordgame-v1.OGV" type="video/ogg" />
+
+                    </video>
+                </center>
+
+                <div class="demo-link" align="right">
+                    <div id="close-modal-btn">
+                        <a href="https://github.com/Jemmycc/Word-Game" target="_blank" id="close-overlay-btn2"
+                            class="btn light-btn" align="right" target="_blank">view code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Friend Modal content -->
+        <div id="modal-friendfinder" class="modal">
+
+            <div class="modal-content">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+
+                <div class="proj3-title">Friend Finder</div>
+                <div class="proj3-text">The user must provide his/her name, a link to his photo and
+                    complete 10
+                    survey questions to get the best match.
+                </div>
+
+                <center>
+                    <video width="600" autoplay="" loop="" muted="">
+                        <source src="./video/friendfinder.mp4" class="backend-video" type="video/mp4">
+                        <source src="./video/friendfinder.webm" type="video/webm" />
+                        <source src="./video/friendfinder.OGV" type="video/ogg" />
+
+                    </video>
+                </center>
+                <div class="demo-link" align="right">
+                    <div id="close-modal-btn">
+                        <a href="https://github.com/Jemmycc/Friend-Finder" target="_blank" id="close-overlay-btn2"
+                            class="btn light-btn" align="right" target="_blank">view code</a>
+                        <a href="https://friend-finder-12242018.herokuapp.com/" target="_blank" id="close-overlay-btn2"
+                            class="btn light-btn" align="right" target="_blank">view
+                            demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bamazon Modal content -->
+        <div id="modal-bamazon" class="modal">
+
+            <div class="modal-content">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+
+                <div class="proj3-title">Bamazon Storefront</div>
+                <div class="proj3-text">For the customer's view, the user simply types “node
+                    bamazonCustomer” to
+                    view the sale items and to make a purchase.
+                    Type an item ID and the quantity to purchase the item. If there is sufficient
+                    inventory, the
+                    messages will show the total sale, update the remaining quantity, and complete the
+                    purchase.
+                    For the manager's view, the user types "node bamazonManager" to get a menu selection of
+                    (1) view
+                    products for sale, (2) view low inventory, (3) add to inventory, (4) add a new product,
+                    (5) delete
+                    a product, and (6)
+                    exit manager view.
+                    For the supervisor's view, he/she can view the overhead, product sales and total
+                    profit in each
+                    department in a table view.
+                </div>
+
+                <center>
+                    <video width="600" autoplay="" loop="" muted="">
+                        <source src="./video/bamazon-v1.mp4" class="backend-video" type="video/mp4">
+                        <source src="./video/bamazon-v1.webm" type="video/webm" />
+                        <source src="./video/bamazon-v1.OGV" type="video/ogg" />
+
+                    </video>
+                </center>
+                <div class="demo-link" align="right">
+                    <div id="close-modal-btn">
+                        <a href="https://github.com/Jemmycc/Bamazon-Storefront" target="_blank" id="close-overlay-btn2"
+                            class="btn light-btn" align="right" target="_blank">view
+                            code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger Modal content -->
+        <div id="modal-burger" class="modal">
+
+            <div class="modal-content">
+                <span class="close" onClick="closeModel()" align="right">&times;</span>
+
+                <div class="proj3-title">Very Good Friends Burger Shop</div>
+                <div class="proj3-text">The restaurant app that lets users input the
+                    names of burgers they'd like to eat.
+                    Whenever a user submits a burger's name, the app will display the burger on the top of
+                    the page --
+                    waiting to be devoured.
+                    Each burger in the waiting area also has a Devour button. When the user clicks it, the
+                    burger will
+                    move to the devoured area.
+                    The app maintains all the burgers in a database, whether they've been devoured or not.
+                </div>
+
+                <center>
+                    <video width="600" autoplay="" loop="" muted="">
+                        <source src="./video/burgershop-v1.mp4" class="backend-video" type="video/mp4">
+                        <source src="./video/burgershop-v1.webm" type="video/webm" />
+                        <source src="./video/burgershop-v1.OGV" type="video/ogg" />
+
+                    </video>
+                </center>
+                <div class="demo-link" align="right">
+                    <div id="close-modal-btn">
+                        <a href="https://github.com/Jemmycc/Friends-Burger-Shop" target="_blank" id="close-overlay-btn2"
+                            class="btn light-btn" target="_blank">view
+                            code</a>
+                        <a href="https://friends-burger-shop-miya010819.herokuapp.com/burgers" target="_blank"
+                            id="close-overlay-btn2" class="btn light-btn" target="_blank">view
+                            demo</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--overlay-->
+    <div id="myOverlay" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <div class="overlay-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8">
+
+                    <div class="card" id="card1">
+                        <div class="row no-gutters">
+                            <div class="col-md-6 card-title">
+                                <video width="350" autoplay="true" muted="" playsinline="">
+                                    <source src="./video/trivia-v1.mp4" class="img-fluid" type="video/mp4">
+                                    <source src="./video/trivia-v1.webm" type="video/webm" />
+                                    <source src="./video/trivia-v1.OGV" type="video/ogg" />
+
+                                </video>
+                            </div>
+
+                            <div class="col-md-6 card-body">
+
+                                <div class="proj1-title">80’S Movie Trivia</div>
+                                <div class="proj1-text">A simple and fun movie trivia game where the player
+                                    tries
+                                    to
+                                    identify an 80’s movie in as few guesses as possible.
+                                </div>
+
+                                <div class="demo-link">
+                                    <a href="https://jemmycc.github.io/80-s-Movie-Trivia/" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        demo</a>
+                                    <a href="https://github.com/Jemmycc/80-s-Movie-Trivia" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card" id="card2">
+                        <div class="row no-gutters">
+                            <div class="col-md-6 card-title">
+
+                                <video width="350" autoplay="" loop="" muted="" playsinline="">
+                                    <source src="./video/crystal-v1.mp4" class="img-fluid" type="video/mp4">
+                                    <source src="./video/crystal-v1.webm" type="video/webm" />
+                                    <source src="./video/crystal-v1.OGV" type="video/ogg" />
+
+                                </video>
+
+                            </div>
+
+                            <div class="col-md-6 card-body">
+
+                                <div class="proj1-title">Crystal Collector</div>
+                                <div class="proj1-text">In Crystal Collector, a player tries to match a
+                                    specific
+                                    value
+                                    by
+                                    selecting a correct combination of crystals. The
+                                    value for each crystal will be randomly generated at the start of each
+                                    game.
+                                </div>
+
+                                <div class="demo-link">
+                                    <a href="https://jemmycc.github.io/Crystal-Collectors-Game/" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        demo</a>
+                                    <a href="https://github.com/Jemmycc/Crystal-Collectors-Game" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="card3">
+                        <div class="row no-gutters">
+                            <div class="col-md-6 card-title">
+                                <video width="350" autoplay="" muted="" playsinline="">
+                                    <source src="./video/slang-v1.mp4" class="img-fluid" type="video/mp4">
+                                    <source src="./video/slang-v1.webm" type="video/webm" />
+                                    <source src="./video/slang-v1.OGV" type="video/ogg" />
+
+                                </video>
+                            </div>
+
+                            <div class="col-md-6 card-body">
+
+                                <div class="proj1-title">Internet Slang</div>
+                                <div class="proj1-text">This game includes 12 multiple-choice questions and
+                                    a
+                                    timer.
+                                    The correct answer is shown after the player answers a
+                                    question. The player tries to get the highest score before the timer
+                                    expires.
+                                </div>
+
+                                <div class="demo-link">
+                                    <a href="https://jemmycc.github.io/Internet-Slang-Game/" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        demo</a>
+                                    <a href="https://github.com/Jemmycc/Internet-Slang-Game" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="card4">
+                        <div class="row no-gutters">
+                            <div class="col-md-6 card-title">
+                                <video width="350" autoplay="" loop="" muted="" playsinline="">
+                                    <source src="./video/paper-v1.mp4" class="img-fluid" type="video/mp4">
+                                    <source src="./video/paper-v1.webm" type="video/webm" />
+                                    <source src="./video/paper-v1.OGV" type="video/ogg" />
+
+                                </video>
+
+                            </div>
+
+                            <div class="col-md-6 card-body">
+
+                                <div class="proj1-title">Rock Paper & Scissors</div>
+                                <div class="proj1-text">The user can play the game with a remote
+                                    player and the score is kept in Firebase. The players also can also chat
+                                    with each other.
+                                </div>
+
+                                <div class="demo-link">
+                                    <a href=" https://jemmycc.github.io/Paper-Rock-Scissors-Game/"
+                                        id="close-overlay-btn" class="btn light-btn" target="_blank">view
+                                        demo</a>
+                                    <a href="https://github.com/Jemmycc/Paper-Rock-Scissors-Game" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="card5">
+                        <div class="row no-gutters">
+                            <div class="col-md-6 card-title">
+                                <video width="350" autoplay="true" muted="" playsinline="">
+                                    <source src="./video/thrones-v1.mp4" class="img-fluid" type="video/mp4">
+                                    <source src="./video/thrones-v1.webm" type="video/webm" />
+                                    <source src="./video/thrones-v1.OGV" type="video/ogg" />
+
+                                </video>
+                            </div>
+
+                            <div class="col-md-6 card-body">
+
+                                <div class="proj1-title">Game of Thrones</div>
+                                <div class="proj1-text">For this game, the user select two characters to fight
+                                    with
+                                    each other. After each round, the characters' power levels are updated
+                                    until
+                                    one
+                                    of the characters win.
+                                </div>
+
+                                <div class="demo-link">
+                                    <a href="https://jemmycc.github.io/Game-of-Thrones-Game/" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        demo</a>
+                                    <a href="https://github.com/Jemmycc/Game-of-Thrones-Game" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        code</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card" id="card6">
+                        <div class="row no-gutters">
+                            <div class="col-md-6 card-title">
+                                <video width="350" autoplay="true" loop="" muted="" playsinline="">
+                                    <source src="./video/clicky-v1.mp4" class="img-fluid" type="video/mp4">
+                                    <source src="./video/clicky-v1.webm" type="video/webm" />
+                                    <source src="./video/clicky-v1.OGV" type="video/ogg" />
+
+                                </video>
+                            </div>
+
+                            <div class="col-md-6 card-body">
+
+                                <div class="proj1-title">Clicky Bird Game</div>
+                                <div class="proj1-text">Click on any bird image to earn points, but don't click on any
+                                    more than once!
+                                </div>
+
+                                <div class="demo-link">
+                                    <a href="https://clickybirdgame-miya0224.herokuapp.com/" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        demo</a>
+                                    <a href="https://github.com/Jemmycc/Clicky-Bird-Game" id="close-overlay-btn"
+                                        class="btn light-btn" target="_blank">view
+                                        code</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-2">
+                    <div class="right-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Link to Javascript -->
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
